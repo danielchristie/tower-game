@@ -13,5 +13,17 @@ namespace tower_game.sc {
             X = x;
             Y = y;
         }
+
+        public int DistanceTo(int x, int y) {
+            // Using the Cartesian Distance formula to detect how 
+            // far away two points on a map are from each other
+            int xDiff = X - x;
+            int yDiff = Y - Y;
+
+            int xDiffSquared = xDiff * xDiff;
+            int yDiffSquared = yDiff * yDiff;
+
+            return (int)Math.Sqrt(xDiffSquared + yDiffSquared);
+        }
     }
 }

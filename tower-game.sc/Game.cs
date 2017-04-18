@@ -12,6 +12,11 @@ namespace tower_game.sc {
             int area = map.Width * map.Height;
             Console.WriteLine(area);
 
+            Point point = new Point(4,2);
+
+            bool isOnMap = map.OnMap(point);
+            Console.WriteLine(isOnMap);
+
             Console.ReadKey();
         }
     }

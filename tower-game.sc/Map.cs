@@ -16,7 +16,8 @@ namespace tower_game.sc {
 
         public bool OnMap(Point point) {
             // if any condition is false then the object in question is beyond the map demensions
-            return point.X >= 0 && point.X < Width && point.Y >= 0 && point.Y < Height;
+            return point.X >= 0 && point.X < Width && 
+                    point.Y >= 0 && point.Y < Height;
         }
     }
 }
