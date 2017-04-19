@@ -6,12 +6,22 @@ using System.Threading.Tasks;
 
 namespace tower_game.sc {
     class DefenseException : System.Exception {
+        public DefenseException() {
 
+        }
+
+        public DefenseException(string message) : base(message) {
+            
+        }
     }
 
     class OutOfBoundsException : DefenseException {
-        OutOfBoundsException(string message) : base(message) {
-                
+        public OutOfBoundsException() {
+
+        }
+
+        public OutOfBoundsException(string message) : base(message) {
+            
         }
     }
 }

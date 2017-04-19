@@ -17,8 +17,14 @@ namespace tower_game.sc {
             try {
                 MapLocation mapLocation = new MapLocation(20, 20, map);
             }
+            catch (OutOfBoundsException ex) {
+                Console.WriteLine(ex.Message);
+            }
+            catch (DefenseException ex) {
+                Console.WriteLine(ex.Message);
+            }
             catch (Exception ex) {
-                Console.WriteLine(ex);
+                Console.WriteLine(ex.Message);
             }
 
             bool isOnMap = map.OnMap(point);
